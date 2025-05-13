@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { URL } from './constants'
+import { FiMenu } from "react-icons/fi";
 
 export default function App() {
 const [question, setQuestion] = useState('');
@@ -22,12 +23,14 @@ const askQuestion = async() => {
 
   return (
     <div className='grid grid-cols-5 h-screen text-center'>
-      <div className='col-span-1 bg-zinc-800'>
-        
+      <div id='drawer-example' className='col-span-1 bg-zinc-800 text-left p-2'>
+        <button className='text-white text-2xl' type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
+          <FiMenu />
+        </button>
       </div>
       <div className='col-span-4 p-10'>
         <div className='container h-110 overflow-auto'>
-          <div className='text-white '>
+          <div className='text-white'>
             {result}
           </div>
         </div>
