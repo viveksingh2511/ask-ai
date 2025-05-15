@@ -128,11 +128,11 @@ export default function Askai() {
         <div className='flex-1 overflow-auto text-white mb-4 scrollbar-dark'>
           <ul className='space-y-2'>
             {result.map((item, index) => (
-              <div key={`entry-${index}`} className={item.type === 'q' ? 'flex justify-end' : ''}>
+              <div key={`entry-${index}`} className={item.type === 'q' ? 'flex justify-end p-2' : ''}>
                 {
                   item.type === 'q' ? (
                     // Question Bubble
-                    <li className='text-right pr-5 bg-zinc-700 rounded-tl-3xl rounded-bl-3xl rounded-br-3xl w-fit p-2 max-w-full md:max-w-[60%]'>
+                    <li className='text-right pr-5 p-2 bg-zinc-700 rounded-tl-3xl rounded-bl-3xl rounded-br-3xl w-fit p-2 max-w-full md:max-w-[60%]'>
                       <Ans answer={item.text} totalResult={1} index={index} />
                     </li>
                   ) : (
